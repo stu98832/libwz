@@ -1,0 +1,1435 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>libwz</name>
+    </assembly>
+    <members>
+        <member name="T:libwz.AES.WzAES">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.AES.WzAES.AESKey">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.AES.WzAES.IVk">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.AES.WzAES.IVg">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.AES.WzAES.GenKey(System.Byte[],System.Int32)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.AES.WzAES.GenKey(libwz.AES.WzKeyType,System.Int32)">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.AES.WzKeyType">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.AES.WzKeyType.None">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.AES.WzKeyType.K">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.AES.WzKeyType.G">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzCanvas">
+            <summary> wz圖像物件 </summary>
+        </member>
+        <member name="P:libwz.WzCanvas.ClassName">
+            <summary> 取得目前<see cref="T:libwz.WzCanvas"/>的Class名稱 </summary>
+        </member>
+        <member name="P:libwz.WzCanvas.Unknow1_Byte">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzCanvas.CanvasProperty">
+            <summary> 取得圖像的屬性 </summary>
+        </member>
+        <member name="P:libwz.WzCanvas.Width">
+            <summary> 取得圖像的寬(像素) </summary>
+        </member>
+        <member name="P:libwz.WzCanvas.Height">
+            <summary> 取得圖像的高(像素) </summary>
+        </member>
+        <member name="P:libwz.WzCanvas.Format">
+            <summary> 取得圖像的像素格式 </summary>
+        </member>
+        <member name="P:libwz.WzCanvas.Scale">
+            <summary> 取得圖像的縮放程度。這個數值將會影響儲存時的資料大小 </summary>
+        </member>
+        <member name="P:libwz.WzCanvas.Unknow2_Int">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzCanvas.DataSize">
+            <summary> 取得圖像資料所佔用的大小 </summary>
+        </member>
+        <member name="P:libwz.WzCanvas.CanvasData">
+            <summary> 取得圖像資料。若是使用動態讀取，則在每次取得圖像資料前都會從資料流把圖片資料讀取出來 </summary>
+        </member>
+        <member name="M:libwz.WzCanvas.#ctor(System.String,libwz.WzCanvasFormat)">
+            <summary> 建立使用指定像素格式的<see cref="T:libwz.WzCanvas"/>實體 </summary>
+            <param name="name"> <see cref="T:libwz.WzCanvas"/>的名稱 </param>
+            <param name="format"> <see cref="T:libwz.WzCanvas"/>的像素格式 </param>
+        </member>
+        <member name="P:libwz.WzCanvas.Item(System.String)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzCanvas.GetBitmap">
+            <summary> 取得這個<see cref="T:libwz.WzCanvas"/>所儲存的圖像資料 </summary>
+        </member>
+        <member name="M:libwz.WzCanvas.SetBitmap(System.Drawing.Bitmap)">
+            <summary> 設定這個<see cref="T:libwz.WzCanvas"/>的圖像資料 </summary>
+        </member>
+        <member name="M:libwz.WzCanvas.Clone">
+            <summary> 產生一個<see cref="T:libwz.WzCanvas"/>的拷貝 </summary>
+        </member>
+        <member name="M:libwz.WzCanvas.Dispose">
+            <summary> 釋放<see cref="T:libwz.WzCanvas"/>所使用的資源 </summary>
+        </member>
+        <member name="T:libwz.WzBool">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.WzBool.True">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.WzBool.False">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzBool.Value">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzBool.#ctor(System.String,System.Boolean)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzBool.ToString">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzBool.GetValue``1(``0)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzBool.Equals(libwz.WzVariant)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzBool.Clone">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzCanvasFormat">
+            <summary> <see cref="T:libwz.WzCanvas"/>所儲存的圖像格式 </summary>
+        </member>
+        <member name="F:libwz.WzCanvasFormat.B4G4R4A4">
+            <summary> 每個像素中的BGRA各佔4bytes，共16bytes </summary>
+        </member>
+        <member name="F:libwz.WzCanvasFormat.B8G8R8A8">
+            <summary> 每個像素中的BGRA各佔8bytes，共32bytes</summary>
+        </member>
+        <member name="F:libwz.WzCanvasFormat.B5G6R5">
+            <summary> 每個像素中的BGR各佔5bytes、6bytes、5bytes，共16bytes </summary>
+        </member>
+        <member name="F:libwz.WzCanvasFormat.DDS_DXT3">
+            <summary> 使用DXT3格式壓縮的圖像 </summary>
+        </member>
+        <member name="F:libwz.WzCanvasFormat.DDS_DXT5">
+            <summary> 使用DXT5格式壓縮的圖像 </summary>
+        </member>
+        <member name="T:libwz.WzDispatch">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzDispatch.Parent">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzDispatch.Value">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDispatch.#ctor(System.String,libwz.WzSerialize)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDispatch.ToString">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDispatch.Equals(libwz.WzVariant)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDispatch.GetValue``1(``0)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDispatch.Clone">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDispatch.Read(libwz.IO.WzFileStream)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDispatch.Write(libwz.IO.WzFileStream)">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzDouble">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzDouble.Value">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDouble.#ctor(System.String,System.Double)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDouble.ToString">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDouble.GetValue``1(``0)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDouble.Equals(libwz.WzVariant)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDouble.Clone">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzMediaType">
+            <summary> wz所使用的MediaType。類似 DirectSound 的 AM_MEDIA_TYPE </summary>
+        </member>
+        <member name="P:libwz.WzMediaType.majortype">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzMediaType.subtype">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzMediaType.Unknow1_Byte">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzMediaType.Unknow2_Byte">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzMediaType.formattype">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzMediaType.cbFormat">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzMediaType.pbFormat">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.WzMediaType.Default">
+            <summary> <see cref="T:libwz.WzSound"/>默認的<see cref="T:libwz.WzMediaType"/>配置(MP3) </summary>
+        </member>
+        <member name="T:libwz.WzNull">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzNull.#ctor(System.String)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzNull.ToString">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzNull.Equals(libwz.WzVariant)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzNull.GetValue``1(``0)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzNull.Clone">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzEmpty">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzEmpty.#ctor(System.String)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzEmpty.ToString">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzEmpty.Equals(libwz.WzVariant)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzEmpty.GetValue``1(``0)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzEmpty.Clone">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzFloat">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzFloat.Value">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzFloat.#ctor(System.String,System.Single)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzFloat.ToString">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzFloat.GetValue``1(``0)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzFloat.Equals(libwz.WzVariant)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzFloat.Clone">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzString">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzString.Value">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzString.#ctor(System.String,System.String)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzString.ToString">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzString.Equals(libwz.WzVariant)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzString.GetValue``1(``0)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzString.Clone">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzUInt">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzUInt.Value">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzUInt.#ctor(System.String,System.UInt32)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzUInt.ToString">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzUInt.GetValue``1(``0)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzUInt.Equals(libwz.WzVariant)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzUInt.Clone">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzLong">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzLong.Value">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzLong.#ctor(System.String,System.Int64)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzLong.ToString">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzLong.GetValue``1(``0)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzLong.Equals(libwz.WzVariant)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzLong.Clone">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzShort">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzShort.Value">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzShort.#ctor(System.String,System.Int16)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzShort.ToString">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzShort.GetValue``1(``0)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzShort.Equals(libwz.WzVariant)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzShort.Clone">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzShort.Read(libwz.IO.WzFileStream)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzShort.Write(libwz.IO.WzFileStream)">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzInt">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzInt.Value">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzInt.#ctor(System.String,System.Int32)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzInt.ToString">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzInt.GetValue``1(``0)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzInt.Equals(libwz.WzVariant)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzInt.Clone">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzShape2D">
+            <summary> wz二維圖形物件。此類別無法直接建立實例 </summary>
+        </member>
+        <member name="P:libwz.WzShape2D.ClassName">
+            <summary> 取得目前<see cref="T:libwz.WzShape2D"/>的Class名稱 </summary>
+        </member>
+        <member name="M:libwz.WzShape2D.#ctor(System.String)">
+            <summary> 建立<see cref="T:libwz.WzShape2D"/>實體 </summary>
+            <param name="name"> <see cref="T:libwz.WzShape2D"/>的名稱 </param>
+        </member>
+        <member name="M:libwz.WzShape2D.Clone">
+            <summary> 產生一個<see cref="T:libwz.WzShape2D"/>的拷貝 </summary>
+        </member>
+        <member name="M:libwz.WzShape2D.Dispose">
+            <summary> 釋放<see cref="T:libwz.WzShape2D"/>所使用的資源 </summary>
+        </member>
+        <member name="T:libwz.WzSerialize">
+            <summary> wz序列化物件。此類別無法直接建立實例 </summary>
+        </member>
+        <member name="P:libwz.WzSerialize.ImageFile">
+            <summary> 表示儲存目前<see cref="T:libwz.WzSerialize"/>物件的<see cref="T:libwz.WzImage"/>物件 </summary>
+        </member>
+        <member name="P:libwz.WzSerialize.Name">
+            <summary> 設定或取得目前<see cref="T:libwz.WzSerialize"/>的名子 </summary>
+        </member>
+        <member name="P:libwz.WzSerialize.Parent">
+            <summary> 設定或取得儲存目前<see cref="T:libwz.WzSerialize"/>的<see cref="T:libwz.WzSerialize"/>物件 </summary>
+        </member>
+        <member name="P:libwz.WzSerialize.ClassName">
+            <summary> 取得目前<see cref="T:libwz.WzSerialize"/>的Class名稱 </summary>
+        </member>
+        <member name="M:libwz.WzSerialize.#ctor(System.String)">
+            <summary> 建立一個<see cref="T:libwz.WzSerialize"/>實體 </summary>
+            <param name="name"> 這個<see cref="T:libwz.WzSerialize"/>物件的名子 </param>
+        </member>
+        <member name="M:libwz.WzSerialize.ToVariant">
+            <summary> 將<see cref="T:libwz.WzSerialize"/>物件包裝成<see cref="T:libwz.WzVariant"/>的形式 </summary>
+        </member>
+        <member name="M:libwz.WzSerialize.FromClassName(System.String,System.String)">
+            <summary> 由指定的class名稱來建立<see cref="T:libwz.WzSerialize"/>實體 </summary>
+            <param name="classname"> class名稱 </param>
+            <param name="name"> 這個<see cref="T:libwz.WzSerialize"/>物件的名稱 </param>
+        </member>
+        <member name="M:libwz.WzSerialize.GetImagePath">
+            <summary> 取得這個<see cref="T:libwz.WzSerialize"/>的所在位置 </summary>
+        </member>
+        <member name="M:libwz.WzSerialize.Clone">
+            <summary> 產生一個<see cref="T:libwz.WzSerialize"/>的拷貝 </summary>
+        </member>
+        <member name="M:libwz.WzSerialize.Dispose">
+            <summary> 釋放<see cref="T:libwz.WzSerialize"/>所使用的資源 </summary>
+        </member>
+        <member name="T:libwz.WzConvex2D">
+            <summary> wz二維凸形物件 </summary>
+        </member>
+        <member name="P:libwz.WzConvex2D.ClassName">
+            <summary> 取得目前<see cref="T:libwz.WzConvex2D"/>的Class名稱 </summary>
+        </member>
+        <member name="P:libwz.WzConvex2D.Vertices">
+            <summary> 取得構成這個<see cref="T:libwz.WzConvex2D"/>的所有的點 </summary>
+        </member>
+        <member name="M:libwz.WzConvex2D.#ctor(System.String)">
+            <summary> 建立<see cref="T:libwz.WzConvex2D"/>實體 </summary>
+            <param name="name"> <see cref="T:libwz.WzConvex2D"/>的名稱 </param>
+        </member>
+        <member name="M:libwz.WzConvex2D.Clone">
+            <summary> 產生一個<see cref="T:libwz.WzConvex2D"/>的拷貝 </summary>
+        </member>
+        <member name="M:libwz.WzConvex2D.Dispose">
+            <summary> 釋放<see cref="T:libwz.WzConvex2D"/>所使用的資源 </summary>
+        </member>
+        <member name="T:libwz.WzProperty">
+            <summary> wz屬性物件 </summary>
+        </member>
+        <member name="P:libwz.WzProperty.ClassName">
+            <summary> 取得目前<see cref="T:libwz.WzProperty"/>的Class名稱 </summary>
+        </member>
+        <member name="P:libwz.WzProperty.Unknow1_UShort">
+            <summary>  </summary>
+        </member>
+        <member name="M:libwz.WzProperty.#ctor(System.String)">
+            <summary> 建立<see cref="T:libwz.WzProperty"/>實體 </summary>
+            <param name="name"> <see cref="T:libwz.WzProperty"/>的名稱 </param>
+        </member>
+        <member name="P:libwz.WzProperty.Item(System.String)">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzProperty.Count">
+            <summary> 取得這個<see cref="T:libwz.WzProperty"/>目前有幾個屬性 </summary>
+        </member>
+        <member name="P:libwz.WzProperty.IsReadOnly">
+            <summary> 表示這個<see cref="T:libwz.WzProperty"/>是否為唯讀 </summary>
+        </member>
+        <member name="P:libwz.WzProperty.Item(System.Int32)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzProperty.Add(libwz.WzVariant)">
+            <summary> 加入指定的<see cref="T:libwz.WzVariant"/>物件 </summary>
+        </member>
+        <member name="M:libwz.WzProperty.AddRange(System.Collections.IEnumerable)">
+            <summary> 加入一系列<see cref="T:libwz.WzVariant"/>物件 </summary>
+        </member>
+        <member name="M:libwz.WzProperty.Clear">
+            <summary> 清空這個<see cref="T:libwz.WzProperty"/>的所有屬性 </summary>
+        </member>
+        <member name="M:libwz.WzProperty.Contains(libwz.WzVariant)">
+            <summary> 確認指定的<see cref="T:libwz.WzVariant"/>物件是否存在於其中 </summary>
+        </member>
+        <member name="M:libwz.WzProperty.CopyTo(libwz.WzVariant[],System.Int32)">
+            <summary> 將<see cref="T:libwz.WzProperty"/>內的所有<see cref="T:libwz.WzVariant"/>複製到相容的<see cref="T:libwz.WzVariant"/>一維陣列中 </summary>
+        </member>
+        <member name="M:libwz.WzProperty.GetEnumerator">
+            <summary> 傳回可以逐一查看的舉列值 </summary>
+        </member>
+        <member name="M:libwz.WzProperty.Remove(libwz.WzVariant)">
+            <summary> 刪除指定的<see cref="T:libwz.WzVariant"/>物件 </summary>
+        </member>
+        <member name="M:libwz.WzProperty.System#Collections#IEnumerable#GetEnumerator">
+            <summary> 傳回可以逐一查看的舉列值 </summary>
+        </member>
+        <member name="M:libwz.WzProperty.Clone">
+            <summary> 產生一個<see cref="T:libwz.WzProperty"/>的拷貝 </summary>
+        </member>
+        <member name="M:libwz.WzProperty.Dispose">
+            <summary> 釋放<see cref="T:libwz.WzProperty"/>所使用的資源 </summary>
+        </member>
+        <member name="T:libwz.WzSound">
+            <summary> wz聲音物件 </summary>
+        </member>
+        <member name="P:libwz.WzSound.ClassName">
+            <summary> 取得目前<see cref="T:libwz.WzSound"/>的Class名稱 </summary>
+        </member>
+        <member name="P:libwz.WzSound.Unknow1_Byte">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzSound.DataSize">
+            <summary> 取得聲音資料的大小 </summary>
+        </member>
+        <member name="P:libwz.WzSound.Duration">
+            <summary> 取得聲音的長度(ms) </summary>
+        </member>
+        <member name="P:libwz.WzSound.Unknow3_Byte">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzSound.MediaType">
+            <summary> 取得聲音的媒體類型 </summary>
+        </member>
+        <member name="P:libwz.WzSound.SoundData">
+            <summary> 取得聲音資料。若使用動態讀取，則會在取得聲音資料前從資料流把聲音資料讀取出來 </summary>
+        </member>
+        <member name="M:libwz.WzSound.#ctor(System.String)">
+            <summary> 建立<see cref="T:libwz.WzSound"/>實體 </summary>
+            <param name="name"> <see cref="T:libwz.WzShape2D"/>的名稱 </param>
+        </member>
+        <member name="M:libwz.WzSound.SetSoundFromFile(System.String)">
+            <summary> 從指定檔案中載入聲音資料 </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:libwz.WzSound.Clone">
+            <summary> 產生一個<see cref="T:libwz.WzSound"/>的拷貝 </summary>
+        </member>
+        <member name="M:libwz.WzSound.Dispose">
+            <summary> 釋放<see cref="T:libwz.WzSound"/>所使用的資源 </summary>
+        </member>
+        <member name="T:libwz.WzUOL">
+            <summary> wz全局物件定位器(Uniform Object Locater)，用於表示某個位於wz文件中的<see cref="T:libwz.WzVariant"/>的位置 </summary>
+        </member>
+        <member name="P:libwz.WzUOL.ClassName">
+            <summary> 取得目前<see cref="T:libwz.WzUOL"/>的Class名稱 </summary>
+        </member>
+        <member name="P:libwz.WzUOL.Unknow1_Byte">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzUOL.Path">
+            <summary> 指向<see cref="T:libwz.WzVariant"/>的路徑 </summary>
+        </member>
+        <member name="M:libwz.WzUOL.#ctor(System.String,System.String)">
+            <summary> 建立<see cref="T:libwz.WzUOL"/>實體 </summary>
+            <param name="name"> <see cref="T:libwz.WzUOL"/>的名稱 </param>
+            <param name="path"> <see cref="T:libwz.WzVariant"/>的位置 </param>
+        </member>
+        <member name="M:libwz.WzUOL.GetVariant">
+            <summary> 取得這個<see cref="T:libwz.WzUOL"/>所指向的<see cref="T:libwz.WzVariant"/> </summary>
+        </member>
+        <member name="M:libwz.WzUOL.LinkVariant(libwz.WzVariant)">
+            <summary> 將這個<see cref="T:libwz.WzUOL"/>指向特定的<see cref="T:libwz.WzVariant"/>。若該<see cref="T:libwz.WzVariant"/>物件不在同一個映像檔中，則會連結失敗 </summary>
+            <param name="variant"> 要指向的<see cref="T:libwz.WzVariant"/>物件 </param>
+        </member>
+        <member name="M:libwz.WzUOL.Clone">
+            <summary> 產生一個<see cref="T:libwz.WzUOL"/>的拷貝 </summary>
+        </member>
+        <member name="M:libwz.WzUOL.Dispose">
+            <summary> 釋放<see cref="T:libwz.WzUOL"/>所使用的資源 </summary>
+        </member>
+        <member name="T:libwz.WzVariant">
+            <summary> wz專用的Variant類別，可以儲存多種類型的資料。此類別無法直接建立實例 </summary>
+        </member>
+        <member name="F:libwz.WzVariant.Null">
+            <summary> 代表null的<see cref="T:libwz.WzVariant"/> </summary>
+        </member>
+        <member name="F:libwz.WzVariant.Empty">
+            <summary> 代表空值的<see cref="T:libwz.WzVariant"/> </summary>
+        </member>
+        <member name="P:libwz.WzVariant.Parent">
+            <summary> 設定或取得儲存這個<see cref="T:libwz.WzVariant"/>的<see cref="T:libwz.WzProperty"/> </summary>
+        </member>
+        <member name="P:libwz.WzVariant.Name">
+            <summary> 設定或取得這個<see cref="T:libwz.WzVariant"/>的名子 </summary>
+        </member>
+        <member name="P:libwz.WzVariant.Type">
+            <summary> 取得這個<see cref="T:libwz.WzVariant"/>的類型 </summary>
+        </member>
+        <member name="M:libwz.WzVariant.#ctor(libwz.WzVariantType,System.String)">
+            <summary> 建立指定類別和名子<see cref="T:libwz.WzVariant"/>實體 </summary>
+            <param name="type"> 這個<see cref="T:libwz.WzVariant"/>的資料類型 </param>
+            <param name="name"> 這個<see cref="T:libwz.WzVariant"/>的名子 </param>
+        </member>
+        <member name="M:libwz.WzVariant.GetImagePath">
+            <summary> 取得這個<see cref="T:libwz.WzVariant"/>的所在位置 </summary>
+        </member>
+        <member name="M:libwz.WzVariant.GetValue``1(``0)">
+            <summary>以指定的類型取得這個<see cref="T:libwz.WzVariant"/>裡的資料。若資料不存在或類型不允許時，則會回傳預設值 </summary>
+            <param name="def"> 預設值 </param>
+        </member>
+        <member name="M:libwz.WzVariant.Equals(libwz.WzVariant)">
+            <summary> 檢查指定的<see cref="T:libwz.WzVariant"/>是否和目前的<see cref="T:libwz.WzVariant"/>相等 </summary>
+            <param name="obj"> 要比較的<see cref="T:libwz.WzVariant"/>物件 </param>
+        </member>
+        <member name="M:libwz.WzVariant.Clone">
+            <summary> 產生一個<see cref="T:libwz.WzVariant"/>的拷貝 </summary>
+        </member>
+        <member name="M:libwz.WzVariant.ToString">
+            <summary> 將這個執行個體的值轉換為它的對等字串表示。 </summary>
+        </member>
+        <member name="M:libwz.WzVariant.Equals(System.Object)">
+            <summary> 判斷指定的 <see cref="T:System.Object"/> 和目前的 <see cref="T:System.Object"/> 是否相等。 </summary>
+            <param name="obj"> <see cref="T:System.Object"/>，要與目前的 <see cref="T:System.Object"/> 比較。 </param>
+        </member>
+        <member name="M:libwz.WzVariant.GetHashCode">
+            <summary> 做為特定型別的雜湊函式。 </summary>
+        </member>
+        <member name="M:libwz.WzVariant.op_Equality(libwz.WzVariant,libwz.WzVariant)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzVariant.op_Inequality(libwz.WzVariant,libwz.WzVariant)">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.WzVariant.mParent">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzVariantType">
+            <summary> wz專用的Variant類型。對應Wtype.h標頭檔中的VARIANT TYPE(VT)部份</summary>
+        </member>
+        <member name="F:libwz.WzVariantType.Empty">
+            <summary> 空資料。對應VT_EMPTY </summary>
+        </member>
+        <member name="F:libwz.WzVariantType.Null">
+            <summary> null。對應VT_NULL </summary>
+        </member>
+        <member name="F:libwz.WzVariantType.Short">
+            <summary> <see cref="T:System.Int16"/>。對應VT_I2 </summary>
+        </member>
+        <member name="F:libwz.WzVariantType.Int">
+            <summary> <see cref="T:System.Int32"/>。對應VT_I4 </summary>
+        </member>
+        <member name="F:libwz.WzVariantType.Float">
+            <summary> <see cref="T:System.Single"/>。對應VT_R4 </summary>
+        </member>
+        <member name="F:libwz.WzVariantType.Double">
+            <summary> <see cref="T:System.Double"/>。對應VT_R8 </summary>
+        </member>
+        <member name="F:libwz.WzVariantType.String">
+            <summary> <see cref="T:System.String"/>。對應VT_BSTR </summary>
+        </member>
+        <member name="F:libwz.WzVariantType.Dispatch">
+            <summary> IUnknown物件，這邊專門儲存<see cref="T:libwz.WzSerialize"/>物件。對應VT_DISPATCH </summary>
+        </member>
+        <member name="F:libwz.WzVariantType.Boolean">
+            <summary> VARIANT_BOOL，0xFFFF為true，0x0000為false。對應VT_BOOL </summary>
+        </member>
+        <member name="F:libwz.WzVariantType.UInt">
+            <summary> <see cref="T:System.UInt32"/>。對應VT_UI4 </summary>
+        </member>
+        <member name="F:libwz.WzVariantType.Long">
+            <summary> <see cref="T:System.Int64"/>。對應VT_I8 </summary>
+        </member>
+        <member name="T:libwz.WzVector2D">
+            <summary> wz二維向量物件 </summary>
+        </member>
+        <member name="P:libwz.WzVector2D.ClassName">
+            <summary> 取得目前<see cref="T:libwz.WzVector2D"/>的Class名稱 </summary>
+        </member>
+        <member name="P:libwz.WzVector2D.X">
+            <summary> 取得或設定這個<see cref="T:libwz.WzVector2D"/>的X座標 </summary>
+        </member>
+        <member name="P:libwz.WzVector2D.Y">
+            <summary> 取得或設定這個<see cref="T:libwz.WzVector2D"/>的Y座標 </summary>
+        </member>
+        <member name="M:libwz.WzVector2D.#ctor(System.String)">
+            <summary> 建立<see cref="T:libwz.WzVector2D"/>實體 </summary>
+            <param name="name"> <see cref="T:libwz.WzVector2D"/>的名稱 </param>
+        </member>
+        <member name="M:libwz.WzVector2D.#ctor(System.String,System.Int32,System.Int32)">
+            <summary> 建立<see cref="T:libwz.WzVector2D"/>實體 </summary>
+            <param name="name"> <see cref="T:libwz.WzVector2D"/>的名稱 </param>
+            <param name="x"> x座標 </param>
+            <param name="y"> y座標 </param>
+        </member>
+        <member name="M:libwz.WzVector2D.Clone">
+            <summary> 產生一個<see cref="T:libwz.WzVector2D"/>的拷貝 </summary>
+        </member>
+        <member name="M:libwz.WzVector2D.Dispose">
+            <summary> 釋放<see cref="T:libwz.WzVector2D"/>所使用的資源 </summary>
+        </member>
+        <member name="T:libwz.Text.SerializeString">
+            <summary> 序列化文字 </summary>
+        </member>
+        <member name="M:libwz.Text.SerializeString.Read(libwz.IO.WzFileStream)">
+            <summary> 從指定的<see cref="T:libwz.IO.WzFileStream"/>中讀取文字 </summary>
+        </member>
+        <member name="M:libwz.Text.SerializeString.Write(libwz.IO.WzFileStream,System.String)">
+            <summary> 將文字寫入指定的<see cref="T:libwz.IO.WzFileStream"/>中 </summary>
+        </member>
+        <member name="T:libwz.Text.SerializeStringPool">
+            <summary> 用來儲存<see cref="T:libwz.Text.SerializeString"/>實例的物件池 </summary>
+        </member>
+        <member name="M:libwz.Text.SerializeStringPool.#ctor(libwz.IO.WzFileStream)">
+            <summary> 透過指定的<see cref="T:libwz.IO.WzFileStream"/>建立<see cref="T:libwz.Text.SerializeStringPool"/>實體 </summary>
+        </member>
+        <member name="M:libwz.Text.SerializeStringPool.Clear">
+            <summary> 清除所有的緩衝資料 </summary>
+        </member>
+        <member name="M:libwz.Text.SerializeStringPool.Read">
+            <summary> 讀取一串序列化文字。如果池裡面已經存在同樣的字串，會從池裡面讀取 </summary>
+        </member>
+        <member name="M:libwz.Text.SerializeStringPool.Write(System.String,System.Byte,System.Byte)">
+            <summary> 寫入一串序列化文字。如果池裡已經存在相同的字串，則會以快取的形式寫入  </summary>
+            <param name="str"> </param>
+            <param name="readsign"> 表示需要從資料流讀取的標記 </param>
+            <param name="refsign"> 表示需要從池裡讀取的標記 </param>
+        </member>
+        <member name="M:libwz.Text.SerializeStringPool.Dispose">
+            <summary> 釋放<see cref="T:libwz.Text.SerializeStringPool"/>所使用的資源 </summary>
+        </member>
+        <member name="T:libwz.IO.WzFileStream">
+            <summary> 使用little-endian的編碼模式讀取wz文件的資料流 </summary>
+        </member>
+        <member name="P:libwz.IO.WzFileStream.StringPool">
+            <summary> 序列化文字池 </summary>
+        </member>
+        <member name="P:libwz.IO.WzFileStream.BaseStream">
+            <summary> 基底資料流 </summary>
+        </member>
+        <member name="P:libwz.IO.WzFileStream.KeyType">
+            <summary> 加密金鑰 </summary>
+        </member>
+        <member name="P:libwz.IO.WzFileStream.BaseOffset">
+            <summary> 資料流起始點 </summary>
+        </member>
+        <member name="P:libwz.IO.WzFileStream.DynamicRead">
+            <summary> 使用動態讀取。這會使<see cref="T:libwz.WzImage"/>在讀取時略過一些資料，以避免佔用太多記憶體 </summary>
+        </member>
+        <member name="P:libwz.IO.WzFileStream.Length">
+            <summary> 取得資料流的總長度(位元組) </summary>
+        </member>
+        <member name="P:libwz.IO.WzFileStream.Position">
+            <summary> 設定或取得資料流的位置 </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.#ctor(System.String,System.IO.FileMode,libwz.AES.WzKeyType)">
+            <summary> 使用指定的模式建立<see cref="T:libwz.IO.WzFileStream"/>實體 </summary>
+            <param name="path"> 檔案路徑 </param>
+            <param name="mode"> 開啟模式 </param>
+            <param name="key"> 加密金鑰 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.#ctor(System.IO.Stream,libwz.AES.WzKeyType)">
+            <summary> 使用指定的資料流和金鑰建立<see cref="T:libwz.IO.WzFileStream"/>實體 </summary>
+            <param name="stream"> 檔案資料流 </param>
+            <param name="key"> 加密金鑰 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Seek(System.Int64,System.Boolean)">
+            <summary> 指定資料流指向的位置 </summary>
+            <param name="off"> 新的資料流位置 </param>
+            <param name="usebase"> 是否從基址開始算起 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Skip(System.Int64)">
+            <summary> 跳過指定位元組大小的資料，並移動資料流指向的位置 </summary>
+            <param name="size"> 需要跳過的位元組數 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Tell(System.Boolean)">
+            <summary> 取得目前資料流所指向的位置 </summary>
+            <param name="usebase"> 是否從基址開始算起 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Flush">
+            <summary> 清除資料流的緩衝資料，並將緩衝資料寫入基礎裝置中 </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Dispose">
+            <summary> 釋放<see cref="T:libwz.IO.WzFileStream"/>所使用的所有資源 </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Dispose(System.Boolean)">
+            <summary> 釋放<see cref="T:libwz.IO.WzFileStream"/>所使用的資源 </summary>
+            <param name="closeBase"> 是否連同Basestream一同釋放 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Read(System.Byte[],System.Int32,System.Boolean)">
+            <summary> 從目前的資料流讀取指定位元組大小的資料到指定的緩衝區內，並移動資料流指向的位置 </summary>
+            <param name="buffer"> 接收資料的資料緩衝區 </param>
+            <param name="length"> 需要讀取的資料長度 </param>
+            <param name="decrypt"> 是否需要進行解密 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Read(System.Int32,System.Boolean)">
+            <summary> 從目前的資料流讀取指定位元組大小的資料，並移動資料流指向的位置 </summary>
+            <param name="length"> 需要讀取的資料長度 </param>
+            <param name="decrypt"> 是否需要進行解密 </param>
+            <returns></returns>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.ReadBool">
+            <summary> 讀取一個<see cref="T:System.Boolean"/>值並將資料流前進1個byte </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Read1u">
+            <summary> 讀取一個<see cref="T:System.Byte"/>值並將資料流前進1個byte </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Read2u">
+            <summary> 讀取一個<see cref="T:System.UInt16"/>值並將資料流前進2個byte </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Read4u">
+            <summary> 讀取一個<see cref="T:System.UInt32"/>值並將資料流前進4個byte </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Read8u">
+            <summary> 讀取一個<see cref="T:System.UInt64"/>值並將資料流前進8個byte </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Read1">
+            <summary> 讀取一個<see cref="T:System.SByte"/>值並將資料流前進1個byte </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Read2">
+            <summary> 讀取一個<see cref="T:System.Int16"/>值並將資料流前進2個byte </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Read4(System.Boolean)">
+            <summary> 讀取一個<see cref="T:System.Int32"/>值並將資料流前進4個byte </summary>
+            <param name="compressed"> 是否為被壓縮的資料 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Read8(System.Boolean)">
+            <summary> 讀取一個<see cref="T:System.Int64"/>值並將資料流前進8個byte </summary>
+            <param name="compressed"> 是否為被壓縮的資料 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.ReadFloat(System.Boolean)">
+            <summary> 讀取一個<see cref="T:System.Single"/>值並將資料流前進4個byte </summary>
+            <param name="compressed"> 是否為被壓縮的資料 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.ReadDouble">
+            <summary> 讀取一個<see cref="T:System.Double"/>值並將資料流前進8個byte </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.ReadString(System.Int32,System.Text.Encoding,System.Boolean)">
+            <summary> 以指定的編碼讀取一串文字並將資料流往前進 </summary>
+            <param name="len"> 文字的長度 </param>
+            <param name="codepage"> 文字編碼 </param>
+            <param name="decrypt"> 是否需要進行解密 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.ReadDataToStream(System.IO.Stream,System.Int64,System.Int32)">
+            <summary> 從讀取一串資料並將結果輸出到指定的資料流中 </summary>
+            <param name="dest"> 目的資料流 </param>
+            <param name="offset"> 讀取資料的起始點 </param>
+            <param name="size"> 讀取大小 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Write(System.Byte[],System.Int32,System.Boolean)">
+            <summary> 將指定位元組大小的資料寫入到緩衝區中，並將資料流位置往前移動 </summary>
+            <param name="buffer"> 要寫入的資料 </param>
+            <param name="length"> 要寫入的長度 </param>
+            <param name="encrypt"> 是否要進行加密 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Write(System.Byte[],System.Boolean)">
+            <summary> 將一組資料寫入到緩衝區中，並將資料流位置往前移動 </summary>
+            <param name="buffer"> 要寫入的資料 </param>
+            <param name="encrypt"> 是否要進行加密 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.WriteBool(System.Boolean)">
+            <summary> 寫入一個<see cref="T:System.Boolean"/>值進入緩衝區，並將資料流往前1個byte </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Write1u(System.Byte)">
+            <summary> 寫入一個<see cref="T:System.Byte"/>值進入緩衝區，並將資料流往前1個byte </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Write2u(System.UInt16)">
+            <summary> 寫入一個<see cref="T:System.UInt16"/>值進入緩衝區，並將資料流往前2個byte </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Write4u(System.UInt32)">
+            <summary> 寫入一個<see cref="T:System.UInt32"/>值進入緩衝區，並將資料流往前4個byte </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Write8u(System.UInt64)">
+            <summary> 寫入一個<see cref="T:System.UInt64"/>值進入緩衝區，並將資料流往前8個byte </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Write1(System.SByte)">
+            <summary> 寫入一個<see cref="T:System.SByte"/>值進入緩衝區，並將資料流往前1個byte </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Write2(System.Int16)">
+            <summary> 寫入一個<see cref="T:System.Int16"/>值進入緩衝區，並將資料流往前2個byte </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Write4(System.Int32,System.Boolean)">
+            <summary> 寫入一個<see cref="T:System.Int32"/>值進入緩衝區，並將資料流往前4個byte </summary>
+            <param name="v"> </param>
+            <param name="compressed"> 是否要進行壓縮 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.Write8(System.Int64,System.Boolean)">
+            <summary> 寫入一個<see cref="T:System.Int64"/>值進入緩衝區，並將資料流往前8個byte </summary>
+            <param name="v"> </param>
+            <param name="compressed"> 是否要進行壓縮 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.WriteFloat(System.Single,System.Boolean)">
+            <summary> 寫入一個<see cref="T:System.Single"/>值進入緩衝區，並將資料流往前4個byte </summary>
+            <param name="v"> </param>
+            <param name="compressed"> 是否要進行壓縮 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.WriteDouble(System.Double)">
+            <summary> 寫入一個<see cref="T:System.Double"/>值進入緩衝區，並將資料流往前2個byte </summary>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.WriteString(System.String,System.Text.Encoding,System.Boolean)">
+            <summary> 將一串文字以指定編碼寫入緩衝區，並將資料流往前 </summary>
+            <param name="str"> 要寫入的字串 </param>
+            <param name="codepage"> 字串的編碼 </param>
+            <param name="encrypt"> 是否需要進行加密 </param>
+        </member>
+        <member name="M:libwz.IO.WzFileStream.WriteDataFromStream(System.IO.Stream,System.Int64,System.Int32)">
+            <summary> 將指定資料流中的一串資料寫入目前的資料流中 </summary>
+            <param name="source"> 來源資料流 </param>
+            <param name="offset"> 來源資料的起始點 </param>
+            <param name="size"> 讀取大小 </param>
+        </member>
+        <member name="T:libwz.WzImage">
+            <summary> wz映像檔 </summary>
+        </member>
+        <member name="P:libwz.WzImage.Data">
+            <summary> 取得目前<see cref="T:libwz.WzImage"/>的序列化資料 </summary>
+        </member>
+        <member name="M:libwz.WzImage.#ctor(libwz.WzSerialize)">
+            <summary> 建立<see cref="T:libwz.WzImage"/>實體 </summary>
+        </member>
+        <member name="M:libwz.WzImage.Read(libwz.IO.WzFileStream)">
+            <summary> 從指定的資料流中讀取<see cref="T:libwz.WzImage"/>的資料 </summary>
+            <param name="stream"> 來源資料流 </param>
+        </member>
+        <member name="M:libwz.WzImage.Write(libwz.IO.WzFileStream)">
+            <summary> 將<see cref="T:libwz.WzImage"/>的資料寫入指定的資料流中 </summary>
+            <param name="stream"> 目的資料流 </param>
+        </member>
+        <member name="M:libwz.WzImage.Clone">
+            <summary> 產生一個<see cref="T:libwz.WzImage"/>的拷貝 </summary>
+        </member>
+        <member name="M:libwz.WzImage.Dispose">
+            <summary> 釋放<see cref="T:libwz.WzImage"/>所使用的資源 </summary>
+        </member>
+        <member name="P:libwz.WzImage.Item(System.String)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzImage.ToWzFile(System.String,libwz.AES.WzKeyType)">
+            <summary> 使用指定的加密金鑰，將加密過的<see cref="T:libwz.WzImage"/>資料寫入<see cref="T:libwz.WzFile"/>中 </summary>
+            <param name="name"> <see cref="T:libwz.WzFile"/>的名子 </param>
+            <param name="key"> 加密金鑰 </param>
+        </member>
+        <member name="M:libwz.WzImage.FromWzFile(libwz.WzFile,System.Boolean)">
+            <summary> 從<see cref="T:libwz.WzFile"/>中讀取資料並建立<see cref="T:libwz.WzImage"/>實體 </summary>
+            <param name="file"> </param>
+            <param name="dynamic"> 是否使用動態讀取。使用動態讀取可以減少圖片和聲音佔用大量記憶體空間，但讀取速度會稍微慢一點 </param>
+        </member>
+        <member name="T:libwz.SoundDX8.MPEGLayer3WaveFormat">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.SoundDX8.MPEGLayer3WaveFormat.wfx">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.SoundDX8.MPEGLayer3WaveFormat.wID">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.SoundDX8.MPEGLayer3WaveFormat.fdwFlags">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.SoundDX8.MPEGLayer3WaveFormat.nBlockSize">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.SoundDX8.MPEGLayer3WaveFormat.nFramesPerBlock">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.SoundDX8.MPEGLayer3WaveFormat.nCodecDelay">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.SoundDX8.MPEGLayer3WaveFormat.ToArray">
+            <summary> 將<see cref="T:libwz.SoundDX8.MPEGLayer3WaveFormat"/>結構轉成<see cref="T:System.Byte"/>陣列 </summary>
+        </member>
+        <member name="M:libwz.SoundDX8.MPEGLayer3WaveFormat.FromArray(System.Byte[])">
+            <summary> 由<see cref="T:System.Byte"/>陣列組成<see cref="T:libwz.SoundDX8.MPEGLayer3WaveFormat"/>結構 </summary>
+        </member>
+        <member name="F:libwz.SoundDX8.MPEGLayer3WaveFormat.StructureSize">
+            <summary> <see cref="T:libwz.SoundDX8.MPEGLayer3WaveFormat"/>結構的大小 </summary>
+        </member>
+        <member name="T:libwz.SoundDX8.SoundDX8Constants">
+            <summary> 與DirectSound8相關，定義在DirectShow中的常數 </summary>
+        </member>
+        <member name="F:libwz.SoundDX8.SoundDX8Constants.TIME_FORMAT_NONE">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.SoundDX8.SoundDX8Constants.MEDIATYPE_Stream">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.SoundDX8.SoundDX8Constants.MEDIASUBTYPE_WAVE">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.SoundDX8.SoundDX8Constants.MEDIASUBTYPE_MPEG1Audio">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.SoundDX8.SoundDX8Constants.WMFORMAT_WaveFormatEx">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.SoundDX8.SoundDX8Constants.WAVE_FORMAT_PCM">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.SoundDX8.SoundDX8Constants.WAVE_FORMAT_MPEGLAYER3">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.SoundDX8.SoundDX8Constants.MPEGLAYER3_ID_MPEG">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.SoundDX8.SoundDX8Constants.MPEGLAYER3_FLAG_PADDING_ISO">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.SoundDX8.SoundDX8Constants.MPEGLAYER3_FLAG_PADDING_ON">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.SoundDX8.SoundDX8Constants.MPEGLAYER3_FLAG_PADDING_OFF">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.SoundDX8.WaveFormatEx">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.SoundDX8.WaveFormatEx.wFormatTag">
+            <summary> format type </summary>
+        </member>
+        <member name="P:libwz.SoundDX8.WaveFormatEx.nChannels">
+            <summary> sample rate </summary>
+        </member>
+        <member name="P:libwz.SoundDX8.WaveFormatEx.nSamplesPerSec">
+            <summary> for buffer estimation </summary>
+        </member>
+        <member name="P:libwz.SoundDX8.WaveFormatEx.nAvgBytesPerSec">
+            <summary> for buffer estimation </summary>
+        </member>
+        <member name="P:libwz.SoundDX8.WaveFormatEx.nBlockAlign">
+            <summary> block size of data </summary>
+        </member>
+        <member name="P:libwz.SoundDX8.WaveFormatEx.wBitsPerSample">
+            <summary> number of bits per sample of mono data </summary>
+        </member>
+        <member name="P:libwz.SoundDX8.WaveFormatEx.cbSize">
+            <summary> the count in bytes of the size of </summary>
+        </member>
+        <member name="M:libwz.SoundDX8.WaveFormatEx.ToArray">
+            <summary> 將<see cref="T:libwz.SoundDX8.WaveFormatEx"/>結構轉成<see cref="T:System.Byte"/>陣列 </summary>
+        </member>
+        <member name="M:libwz.SoundDX8.WaveFormatEx.FromArray(System.Byte[])">
+            <summary> 由<see cref="T:System.Byte"/>陣列組成<see cref="T:libwz.SoundDX8.WaveFormatEx"/>結構 </summary>
+        </member>
+        <member name="F:libwz.SoundDX8.WaveFormatEx.StructureSize">
+            <summary> <see cref="T:libwz.SoundDX8.WaveFormatEx"/>結構的大小 </summary>
+        </member>
+        <member name="T:libwz.Tools.CanvasZlibTool">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.Tools.CanvasZlibTool.Z_DEFLATE">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.CanvasZlibTool.CheckDeflate(System.Byte,System.Byte,System.Byte)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.CanvasZlibTool.Compress(System.Byte[],System.Int32)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.CanvasZlibTool.Decompress(System.Byte[],System.Int32)">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.Tools.HashTools">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.HashTools.GenerateChecksum(System.IO.Stream,System.Int64,System.Int32)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.HashTools.GenerateArchiveVersionHash(System.String)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.HashTools.EncryptArchiveVersionHash(System.Int32)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.HashTools.GenerateOffsetKey(System.UInt32,System.UInt32,System.Int32)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.HashTools.DecryptOffsetHash(System.UInt32,System.UInt32,System.UInt32)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.HashTools.EncryptOffsetHash(System.UInt32,System.UInt32,System.UInt32)">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.Tools.MapleTextFormat">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.UnknowFormat">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.PlainText">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.ParseFail">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.ColorBlack">
+            <summary> change font color to black </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.ColorViolet">
+            <summary> change font color to violet </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.ColorRed">
+            <summary> change font color to red </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.ColorGreen">
+            <summary> change font color to green </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.ColorBlue">
+            <summary> change font color to blue </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.FontBold">
+            <summary> set bold font</summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.FontRegular">
+            <summary> set regular font</summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.OptionBegin">
+            <summary> option tag </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.OptionEnd">
+            <summary> option end tag </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.UserName">
+            <summary> display user name </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.ItemName">
+            <summary> display item name </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.ItemNameWithInfo">
+            <summary> display item name with information </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.ItemIcon">
+            <summary> display item icon </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.ItemIconWithInfo">
+            <summary> display item icon with information </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.ItemCount">
+            <summary> display item count </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.SkillName">
+            <summary> display skill name </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.SkillIcon">
+            <summary> display skill icon </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.QuestName">
+            <summary> display quest name </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.QuestSummaryIcon">
+            <summary> display quest summary icon </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.QuestState">
+            <summary> display quest's state </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.QuestValue">
+            <summary> display quest's value </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.QuestMobCount">
+            <summary> display quest's mob count </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.QuestMobName">
+            <summary> display quest's mob name </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.QuestBonusExp">
+            <summary> display quest's bonus exp </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.QuestGauge">
+            <summary> display quest gauge </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.QuestProgressState">
+            <summary> display quest's progress state </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.MapName">
+            <summary> display map name </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.MobName">
+            <summary> display mob name </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.NpcName">
+            <summary> display npc name </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.NpcNameWithoutLink">
+            <summary> display npc name without link </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.ProgressBar">
+            <summary> display progress bar </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.ShowCanvas">
+            <summary> display canvas </summary>
+        </member>
+        <member name="F:libwz.Tools.MapleTextFormat.ShowCanvas2">
+            <summary> display canvas </summary>
+        </member>
+        <member name="T:libwz.Tools.MapleTextParser">
+            <summary> To parse text used in maplestory. </summary>
+        </member>
+        <member name="P:libwz.Tools.MapleTextParser.Source">
+            <summary> source text </summary>
+        </member>
+        <member name="P:libwz.Tools.MapleTextParser.Position">
+            <summary> prase position </summary>
+        </member>
+        <member name="P:libwz.Tools.MapleTextParser.Token">
+            <summary> token </summary>
+        </member>
+        <member name="P:libwz.Tools.MapleTextParser.EndOfText">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.MapleTextParser.Load(System.String)">
+            <summary> load and initialize source text and position </summary>
+        </member>
+        <member name="M:libwz.Tools.MapleTextParser.Next(System.Boolean)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.MapleTextParser.NumToken">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.Tools.SoundTools">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.SoundTools.LoadWAV(libwz.WzSound,System.IO.BinaryReader)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.SoundTools.LoadMP3_ID3(libwz.WzSound,System.IO.BinaryReader)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.SoundTools.LoadMP3_TAG(libwz.WzSound,System.IO.BinaryReader)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.SoundTools.LoadMP3_ReadFrameData(libwz.WzSound,System.IO.BinaryReader,System.Int32)">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.Tools.CanvasTools">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.CanvasTools.Decompress(libwz.WzCanvasFormat,System.Byte,System.Int32,System.Int32,System.Byte[])">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.Tools.CanvasTools.Compress(libwz.WzCanvasFormat,System.Byte,System.Int32,System.Int32,System.Drawing.Bitmap)">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzDirectory">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzDirectory.Items">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzDirectory.Count">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzDirectory.IsReadOnly">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDirectory.#ctor(System.String)">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzDirectory.Item(System.String)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDirectory.Extract(System.String,System.IO.Stream)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDirectory.Add(libwz.WzArchiveItem)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDirectory.Clear">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDirectory.Contains(libwz.WzArchiveItem)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDirectory.CopyTo(libwz.WzArchiveItem[],System.Int32)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDirectory.Remove(libwz.WzArchiveItem)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDirectory.GetEnumerator">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzDirectory.System#Collections#IEnumerable#GetEnumerator">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzFile">
+            <summary> 代表wz文件內的檔案結構 </summary>
+        </member>
+        <member name="P:libwz.WzFile.KeyType">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzFile.Stream">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzFile.#ctor(System.String,libwz.AES.WzKeyType)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzFile.FromFile(System.String,libwz.AES.WzKeyType)">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzLua">
+            <summary> wzLua腳本 </summary>
+        </member>
+        <member name="P:libwz.WzLua.Name">
+            <summary> 腳本名稱 </summary>
+        </member>
+        <member name="P:libwz.WzLua.Script">
+            <summary> 腳本內容 </summary>
+        </member>
+        <member name="M:libwz.WzLua.Read(libwz.IO.WzFileStream)">
+            <summary> 從指定資料流讀取腳本資料 </summary>
+        </member>
+        <member name="M:libwz.WzLua.Write(libwz.IO.WzFileStream)">
+            <summary> 將腳本資料寫入指定資料流 </summary>
+        </member>
+        <member name="M:libwz.WzLua.Dispose">
+            <summary> 釋放<see cref="T:libwz.WzLua"/>所使用的資源 </summary>
+        </member>
+        <member name="M:libwz.WzLua.ToWzFile(System.String,libwz.AES.WzKeyType)">
+            <summary> 使用指定的加密金鑰，將加密過的<see cref="T:libwz.WzLua"/>資料寫入<see cref="T:libwz.WzFile"/>中 </summary>
+            <param name="name"> <see cref="T:libwz.WzFile"/>的名子 </param>
+            <param name="key"> 加密金鑰 </param>
+        </member>
+        <member name="M:libwz.WzLua.FromWzFile(libwz.WzFile)">
+            <summary> 從<see cref="T:libwz.WzFile"/>中讀取資料並建立<see cref="T:libwz.WzLua"/>實體 </summary>
+        </member>
+        <member name="T:libwz.WzArchiveItem">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzArchiveItem.Type">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzArchiveItem.Name">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzArchiveItem.Size">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzArchiveItem.Checksum">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzArchiveItem.Offset">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzArchiveItem.Archive">
+            <summary> </summary>
+        </member>
+        <member name="P:libwz.WzArchiveItem.Parent">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WzArchiveItem.#ctor(System.String,libwz.WzArchiveItemType)">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzArchiveItemType">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.WzArchiveItemType.Reference">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.WzArchiveItemType.Directory">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.WzArchiveItemType.File">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WZUtil">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.WZUtil.GlobalKey_K">
+            <summary> </summary>
+        </member>
+        <member name="F:libwz.WZUtil.GlobalKey_G">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WZUtil.XORBuffer(System.Byte[],System.Byte[],System.Int32)">
+            <summary> </summary>
+        </member>
+        <member name="M:libwz.WZUtil.XORKey(System.Byte[],System.Int32,libwz.AES.WzKeyType)">
+            <summary> </summary>
+        </member>
+        <member name="T:libwz.WzArchive">
+            <summary> wz打包文件 </summary>
+        </member>
+        <member name="P:libwz.WzArchive.DataSize">
+            <summary> 文件大小 </summary>
+        </member>
+        <member name="P:libwz.WzArchive.DataOffset">
+            <summary> 文件位址 </summary>
+        </member>
+        <member name="P:libwz.WzArchive.Description">
+            <summary> 文件描述 </summary>
+        </member>
+        <member name="P:libwz.WzArchive.RootDirectory">
+            <summary> 根目錄 </summary>
+        </member>
+        <member name="M:libwz.WzArchive.#ctor">
+            <summary> 建立一個<see cref="T:libwz.WzArchive"/>實體 </summary>
+        </member>
+        <member name="M:libwz.WzArchive.#ctor(libwz.WzDirectory)">
+            <summary> 建立一個連接指定<see cref="T:libwz.WzDirectory"/>的<see cref="T:libwz.WzArchive"/>實體 </summary>
+            <param name="link"> 要進行連結的<see cref="T:libwz.WzDirectory"/>實例 </param>
+        </member>
+        <member name="P:libwz.WzArchive.Hash">
+            <summary> 文件雜湊碼 </summary>
+        </member>
+        <member name="P:libwz.WzArchive.Version">
+            <summary> 文件版本 </summary>
+        </member>
+        <member name="P:libwz.WzArchive.Stream">
+            <summary> 文件資料流 </summary>
+        </member>
+        <member name="P:libwz.WzArchive.Item(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:libwz.WzArchive.Open(System.String,libwz.AES.WzKeyType)">
+            <summary> 從指定路徑建立<see cref="T:libwz.IO.WzFileStream"/>並讀取資料 </summary>
+        </member>
+        <member name="M:libwz.WzArchive.Read">
+            <summary> 使用自身的<see cref="T:libwz.IO.WzFileStream"/>讀取資料 </summary>
+        </member>
+        <member name="M:libwz.WzArchive.Read(libwz.IO.WzFileStream)">
+            <summary> 使用外部的<see cref="T:libwz.IO.WzFileStream"/>讀取資料 </summary>
+        </member>
+        <member name="M:libwz.WzArchive.Write">
+            <summary> 使用自身的<see cref="T:libwz.IO.WzFileStream"/>儲存資料 </summary>
+        </member>
+        <member name="M:libwz.WzArchive.Write(libwz.IO.WzFileStream)">
+            <summary> 使用外部的的<see cref="T:libwz.IO.WzFileStream"/>儲存資料 </summary>
+        </member>
+        <member name="M:libwz.WzArchive.BaseLink(System.String)">
+            <summary> 從指定路徑讀取wz文件並與自身的<see cref="T:libwz.WzDirectory"/>進行連結，用於Base.wz</summary>
+            <param name="path"> 連接檔案路徑 </param>
+        </member>
+        <member name="M:libwz.WzArchive.GetVariant(System.String,libwz.WzImage@)">
+            <summary> 透過指定路徑取得對應的<see cref="T:libwz.WzVariant"/> </summary>
+            <param name="path"> <see cref="T:libwz.WzVariant"/>的所在位置 </param>
+            <param name="img"> 尋找時所開啟的<see cref="T:libwz.WzImage"/>物件 </param>
+        </member>
+        <member name="M:libwz.WzArchive.CloneVariant(System.String)">
+            <summary> 取得指定路徑的<see cref="T:libwz.WzVariant"/>拷貝 </summary>
+            <param name="path"> <see cref="T:libwz.WzVariant"/>的所在位置 </param>
+        </member>
+    </members>
+</doc>

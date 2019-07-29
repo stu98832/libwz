@@ -1,0 +1,6 @@
+E:\Downloads\程式設計\Dot Net\CShape專檔\libwz\libwz\bin\Release\libwz.dll
+E:\Downloads\程式設計\Dot Net\CShape專檔\libwz\libwz\bin\Release\libwz.pdb
+E:\Downloads\程式設計\Dot Net\CShape專檔\libwz\libwz\obj\Release\libwz.csproj.CoreCompileInputs.cache
+E:\Downloads\程式設計\Dot Net\CShape專檔\libwz\libwz\obj\Release\libwz.dll
+E:\Downloads\程式設計\Dot Net\CShape專檔\libwz\libwz\obj\Release\libwz.pdb
+E:\Downloads\程式設計\Dot Net\CShape專檔\libwz\libwz\obj\Release\libwz.csprojResolveAssemblyReference.cache

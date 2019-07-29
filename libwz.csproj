@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67BEBBF2-4388-4751-AA5A-553262D3615C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>libwz</RootNamespace>
+    <AssemblyName>libwz</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>bin\Debug\libwz.xml</DocumentationFile>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AES\WZAES.cs" />
+    <Compile Include="AES\WzKeyType.cs" />
+    <Compile Include="Image\WzCanvas.cs" />
+    <Compile Include="Image\WzBool.cs" />
+    <Compile Include="Image\WzCanvasFormat.cs" />
+    <Compile Include="Image\WzDispatch.cs" />
+    <Compile Include="Image\WzDouble.cs" />
+    <Compile Include="Image\WzMediaType.cs" />
+    <Compile Include="Image\WzNull.cs" />
+    <Compile Include="Image\WzEmpty.cs" />
+    <Compile Include="Image\WzFloat.cs" />
+    <Compile Include="Image\WzString.cs" />
+    <Compile Include="Image\WzUInt.cs" />
+    <Compile Include="Image\WzLong.cs" />
+    <Compile Include="Image\WzShort.cs" />
+    <Compile Include="Image\WzInt.cs" />
+    <Compile Include="Image\WzShape2D.cs" />
+    <Compile Include="Image\WzSerialize.cs" />
+    <Compile Include="Image\WzConvex2D.cs" />
+    <Compile Include="Image\WzProperty.cs" />
+    <Compile Include="Image\WzSound.cs" />
+    <Compile Include="Image\WzUOL.cs" />
+    <Compile Include="Image\WzVariant.cs" />
+    <Compile Include="Image\WzVariantType.cs" />
+    <Compile Include="Image\WzVector2D.cs" />
+    <Compile Include="Text\SerializeString.cs" />
+    <Compile Include="Text\SerializeStringPool.cs" />
+    <Compile Include="IO\WzFileStream.cs" />
+    <Compile Include="Image\WzImage.cs" />
+    <Compile Include="SoundDX8\MPEGLayer3WaveFormat.cs" />
+    <Compile Include="SoundDX8\SoundDX8Constants.cs" />
+    <Compile Include="SoundDX8\WaveFormatEx.cs" />
+    <Compile Include="Tools\CanvasZlibTools.cs" />
+    <Compile Include="Tools\HashTools.cs" />
+    <Compile Include="Tools\MapleTextFormat.cs" />
+    <Compile Include="Tools\MapleTextParser.cs" />
+    <Compile Include="Tools\SoundTools.cs" />
+    <Compile Include="WzDirectory.cs" />
+    <Compile Include="WzFile.cs" />
+    <Compile Include="Lua\WzLua.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\CanvasTools.cs" />
+    <Compile Include="WzArchiveItem.cs" />
+    <Compile Include="WzArchiveItemType.cs" />
+    <Compile Include="WzUtil.cs" />
+    <Compile Include="WzArchive.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LibDDS\LibDDS\libdds.csproj">
+      <Project>{a9c6d96c-c14a-48ba-9978-d8070ac562a1}</Project>
+      <Name>libdds</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
