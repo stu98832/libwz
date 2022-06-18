@@ -1,3 +1,5 @@
+[New project](https://github.com/stu98832/NeoWZ)
+
 # libwz
 
 使用`C#4` `.net2.0` 製作的 Maplestory wz檔案函式庫
